@@ -8,5 +8,4 @@ def solution(n):
             answer = str(n%3) + answer
             n = n//3
     
-    
     return answer
