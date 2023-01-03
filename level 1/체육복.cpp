@@ -16,7 +16,7 @@ int solution(int n, vector<int> lost, vector<int> reserve)
                 j--;
             }
         }
-    }//greedyÇÔÀ¸·Î ÀÒ¾î¹ö¸° ÇÐ»ýÀÌ ÀÚ½ÅÀÇ ¿©º°¿ÊÀ» µé°í¿Ô´Ù¸é ¹«Á¶°Ç ÀÚ½ÅÀÌ ÀÔ´Â´Ù.
+    }//greedyí•¨ìœ¼ë¡œ ìžƒì–´ë²„ë¦° í•™ìƒì´ ìžì‹ ì˜ ì—¬ë³„ì˜·ì„ ë“¤ê³ ì™”ë‹¤ë©´ ë¬´ì¡°ê±´ ìžì‹ ì´ ìž…ëŠ”ë‹¤.
 
     for(i=lost.begin(); i<lost.end(); i++){
         for(j=reserve.begin(); j<reserve.end(); j++){
@@ -33,11 +33,11 @@ int solution(int n, vector<int> lost, vector<int> reserve)
     /*n               :18
     lost           :[7,8,11,12]
     reserve    : [1,6,8,10]
-    À§ÀÇ ÄÚµåÀÏ ¶§, ¾Õ¼­ ¶È°°Àº °ÍµéÀ» ¸ðµÎ Áö¿üÀ¸¹Ç·Î lost¿Í reserve¿¡ ³²¾ÆÀÖ´Â ¼öµéÀº
+    ìœ„ì˜ ì½”ë“œì¼ ë•Œ, ì•žì„œ ë˜‘ê°™ì€ ê²ƒë“¤ì„ ëª¨ë‘ ì§€ì› ìœ¼ë¯€ë¡œ lostì™€ reserveì— ë‚¨ì•„ìžˆëŠ” ìˆ˜ë“¤ì€
     lost    : [7, 11, 12]
     reserve : [1, 6, 10]
-    lostÀÇ 7°ú reserveÀÇ 6ÀÌ Áö¿öÁö¸é¼­ 11ÀÌ ÀÚ¿¬½º·¹ lost vectorÀÇ beginÀ¸·Î °¡¸é¼­ 11Àº ºñ±³ÇÏÁö ¸øÇÏ°í ¹Ù·Î 12·Î ³Ñ¾î°£´Ù.
-    ÀÌÃ³·³ ¿¬¼ÓÀûÀ¸·Î Áö¿öÁú °æ¿ì°¡ ÀÕ´Â °æ¿ì »ý·« µÉ ¼ö ÀÕÀ¸¹Ç·Î, ºô·ÁÁÙ ¼ö ÀÖ´Â ¿ÊÀ» Ã£Àº °æ¿ì lost¿Í reserve °ªÀ» Áö¿ì±â º¸´Ù´Â 0À¸·Î ´ëÃ¼ÇÏ±â·Î Çß´Ù.*/
+    lostì˜ 7ê³¼ reserveì˜ 6ì´ ì§€ì›Œì§€ë©´ì„œ 11ì´ ìžì—°ìŠ¤ë ˆ lost vectorì˜ beginìœ¼ë¡œ ê°€ë©´ì„œ 11ì€ ë¹„êµí•˜ì§€ ëª»í•˜ê³  ë°”ë¡œ 12ë¡œ ë„˜ì–´ê°„ë‹¤.
+    ì´ì²˜ëŸ¼ ì—°ì†ì ìœ¼ë¡œ ì§€ì›Œì§ˆ ê²½ìš°ê°€ ìž‡ëŠ” ê²½ìš° ìƒëžµ ë  ìˆ˜ ìž‡ìœ¼ë¯€ë¡œ, ë¹Œë ¤ì¤„ ìˆ˜ ìžˆëŠ” ì˜·ì„ ì°¾ì€ ê²½ìš° lostì™€ reserve ê°’ì„ ì§€ìš°ê¸° ë³´ë‹¤ëŠ” 0ìœ¼ë¡œ ëŒ€ì²´í•˜ê¸°ë¡œ í–ˆë‹¤.*/
 
     /*for(i=lost.begin(); i<lost.end(); i++){
         for(j=reserve.begin(); j<reserve.end(); j++){
@@ -48,7 +48,7 @@ int solution(int n, vector<int> lost, vector<int> reserve)
         }
     }
 
-    int count=0;//0ÀÌ ¾Æ´Ñ ¼ö¸¦ ¼¾´Ù.
+    int count=0;//0ì´ ì•„ë‹Œ ìˆ˜ë¥¼ ì„¼ë‹¤.
     for(i=lost.begin(); i<lost.end(); i++){
         if(*i!=0){
             count++;
@@ -60,4 +60,4 @@ int solution(int n, vector<int> lost, vector<int> reserve)
 
     return 0;
 }
-//ÃÖÁ¾ÀûÀ¸·Î erase¿¡ ÀÇÇØ¼­ ÇÑÄ­ ³Ñ¾î°¡´Â Çö»óÀ» ´Ù½Ã i,j¸¦ ÇÑÄ­ µÚ·Î ³Ñ°ÜÁÖ´Â°É·Î ¸¶¹«¸® Çß´Ù.
+//ìµœì¢…ì ìœ¼ë¡œ eraseì— ì˜í•´ì„œ í•œì¹¸ ë„˜ì–´ê°€ëŠ” í˜„ìƒì„ ë‹¤ì‹œ i,jë¥¼ í•œì¹¸ ë’¤ë¡œ ë„˜ê²¨ì£¼ëŠ”ê±¸ë¡œ ë§ˆë¬´ë¦¬ í–ˆë‹¤.
