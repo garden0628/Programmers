@@ -6,14 +6,14 @@ vector<int> solution(vector<int> arr)
 {
     vector<int> answer;
     /*vector<int>::iterator i;
-    for(i=arr.begin(); i<arr.end()-1; i++){//end()°¡ ¸¶Áö¸·ÀÇ ´ÙÀ½À» °¡¸®Å°¹Ç·Î <¿Í -1À» µÎ¹øÇØÁà¾ßÇÑ´Ù.
+    for(i=arr.begin(); i<arr.end()-1; i++){//end()ê°€ ë§ˆì§€ë§‰ì˜ ë‹¤ìŒì„ ê°€ë¦¬í‚¤ë¯€ë¡œ <ì™€ -1ì„ ë‘ë²ˆí•´ì¤˜ì•¼í•œë‹¤.
         if(*i==*(i+1)){
             arr.erase(i);
             i--;
         }
     }
     answer=arr;
-    return answer; °á°ú´Â ¸ðµÎ ¸ÂÁö¸¸ ½Ã°£ ÃÊ°ú!!!
+    return answer; ê²°ê³¼ëŠ” ëª¨ë‘ ë§žì§€ë§Œ ì‹œê°„ ì´ˆê³¼!!!
     */
 
     int len=arr.size();
