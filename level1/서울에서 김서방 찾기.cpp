@@ -1,4 +1,4 @@
-//for¹® »ç¿ë
+//forë¬¸ ì‚¬ìš©
 #include <string>
 #include <vector>
 using namespace std;
@@ -11,11 +11,11 @@ string solution(vector<string> seoul) {
             idx=i;
         }
     }
-    string answer="±è¼­¹æÀº "+to_string(idx)+"¿¡ ÀÖ´Ù";
+    string answer="ê¹€ì„œë°©ì€ "+to_string(idx)+"ì— ìˆë‹¤";
     return answer;
 }
 
-//find ¾Ë°í¸®Áò »ç¿ë
+//find ì•Œê³ ë¦¬ì¦˜ ì‚¬ìš©
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -24,6 +24,6 @@ using namespace std;
 string solution(vector<string> seoul) {
     string answer;
     int idx=find(seoul.begin(), seoul.end(), "Kim")-seoul.begin();
-    answer="±è¼­¹æÀº "+to_string(idx)+"¿¡ ÀÖ´Ù";
+    answer="ê¹€ì„œë°©ì€ "+to_string(idx)+"ì— ìˆë‹¤";
     return answer;
 }
