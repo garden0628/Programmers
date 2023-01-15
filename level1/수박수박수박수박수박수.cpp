@@ -8,11 +8,11 @@ string solution(int n) {
     int count=1;
     while(count<=n){
         if(count%2==1){
-            answer+="¼ö";
+            answer+="Â¼Ã¶";
             count++;
         }
         else{
-            answer+="¹Ú";
+            answer+="Â¹Ãš";
             count++;
         }
     }
