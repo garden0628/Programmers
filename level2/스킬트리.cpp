@@ -4,11 +4,11 @@
 using namespace std;
 
 bool check_skill(string skill, string skill_trees) {
-    int count1 = 0; // skill¿¡ ÀÖ´Â ¹®ÀÚ°¡ skill_trees¿¡ ÀÖ´Ù¸é count1À» ¼¼¾îÁØ´Ù.
+    int count1 = 0; // skillì— ìˆëŠ” ë¬¸ìê°€ skill_treesì— ìˆë‹¤ë©´ count1ì„ ì„¸ì–´ì¤€ë‹¤.
     int idx = skill_trees.size();
-    //skillÀÇ µÚ¿¡¼­ºÎÅÍ skill_trees¿Í ´ëÁ¶ÇÑ´Ù.
-    //Á¸ÀçÇÑ´Ù¸é idx¿¡ Á¸ÀçÇß´ø À§Ä¡¸¦ ÀúÀåÇÑ´Ù.
-    //´ÙÀ½À¸·Î ´ëÁ¶ÇÏ´Â skill°ú skill_trees°¡ ÀÏÄ¡ÇÏ´Â À§Ä¡°¡ idxº¸´Ù µÚ¶ó¸é false
+    //skillì˜ ë’¤ì—ì„œë¶€í„° skill_treesì™€ ëŒ€ì¡°í•œë‹¤.
+    //ì¡´ì¬í•œë‹¤ë©´ idxì— ì¡´ì¬í–ˆë˜ ìœ„ì¹˜ë¥¼ ì €ì¥í•œë‹¤.
+    //ë‹¤ìŒìœ¼ë¡œ ëŒ€ì¡°í•˜ëŠ” skillê³¼ skill_treesê°€ ì¼ì¹˜í•˜ëŠ” ìœ„ì¹˜ê°€ idxë³´ë‹¤ ë’¤ë¼ë©´ false
     for(int i=skill.size()-1; i>=0; i--){
         int count2=0;
         for(int j=0; j<skill_trees.size(); j++){
@@ -20,14 +20,14 @@ bool check_skill(string skill, string skill_trees) {
                 idx = j;
                 continue;
             }
-            //count2¸¦ ¼¼¾îÁÖ´Â ÀÌÀ¯´Â skill"CBD", skill_trees"BDA"°°Àº °æ¿ì¿¡ ´ëÀÀÇÏ±â À§ÇØ
+            //count2ë¥¼ ì„¸ì–´ì£¼ëŠ” ì´ìœ ëŠ” skill"CBD", skill_trees"BDA"ê°™ì€ ê²½ìš°ì— ëŒ€ì‘í•˜ê¸° ìœ„í•´
             else{
                 count2++;
             }
         }
-        //¸¸¾à count1ÀÌ 0ÀÌ ¾Æ´Ï°í(skillÀÇ µŞºÎºĞ¿¡¼­ skill_trees¿Í ÀÏÄ¡ÇÏ´Â ºÎºĞÀÌ ÀÖ´Ù)
-        //±×¸®°í count2°¡ skill_trees.size()¿Í °°´Ù¸é
-        //skillÀÇ ¾ÕºÎºĞÀÌ skill_trees¿¡ ¾ø´Ù´Â ÀÇ¹ÌÀÌ¹Ç·Î false.
+        //ë§Œì•½ count1ì´ 0ì´ ì•„ë‹ˆê³ (skillì˜ ë’·ë¶€ë¶„ì—ì„œ skill_treesì™€ ì¼ì¹˜í•˜ëŠ” ë¶€ë¶„ì´ ìˆë‹¤)
+        //ê·¸ë¦¬ê³  count2ê°€ skill_trees.size()ì™€ ê°™ë‹¤ë©´
+        //skillì˜ ì•ë¶€ë¶„ì´ skill_treesì— ì—†ë‹¤ëŠ” ì˜ë¯¸ì´ë¯€ë¡œ false.
         if(count1 != 0 && count2 == skill_trees.size()){
             return false;
         }
@@ -38,7 +38,7 @@ bool check_skill(string skill, string skill_trees) {
 int solution(string skill, vector<string> skill_trees) {
     int answer = 0;
     for(int i=0; i<skill_trees.size(); i++){
-        //check_skill ÇÔ¼ö(½ºÅ³Æ®¸®¸¦ È®ÀÎÇÏ´Â ÇÔ¼ö)°¡ ¸Â´Ù¸é answer++
+        //check_skill í•¨ìˆ˜(ìŠ¤í‚¬íŠ¸ë¦¬ë¥¼ í™•ì¸í•˜ëŠ” í•¨ìˆ˜)ê°€ ë§ë‹¤ë©´ answer++
         if(check_skill(skill, skill_trees[i])){
             answer++;
         }
