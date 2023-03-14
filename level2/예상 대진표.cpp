@@ -4,7 +4,7 @@ using namespace std;
 
 int findsequence(int n, int a, int b) {
     int count = 0;
-    //a¿Í b°¡ °¢°¢ ´ëÁøÇ¥ÀÇ ¹İ´ëÆí¿¡ ÀÖ´Â °æ¿ì
+    //aì™€ bê°€ ê°ê° ëŒ€ì§„í‘œì˜ ë°˜ëŒ€í¸ì— ìˆëŠ” ê²½ìš°
     if((a <= n/2) && (b > n/2)){
         while(n!=1){
             count++;
@@ -12,8 +12,8 @@ int findsequence(int n, int a, int b) {
         }
         return count;
     }
-    //a¿Í b°¡ °¢°¢ ´ëÁøÇ¥ÀÇ ÇÑÂÊ¿¡ ÀÖ´Â °æ¿ì
-    //¹İ´ëÆí ´ëÁøÇ¥¸¦ Áö¿ì°í ´Ù½Ã ÇÔ¼ö¿¡ ³Ö¾îÁØ´Ù (Àç±ÍÇÔ¼ö)
+    //aì™€ bê°€ ê°ê° ëŒ€ì§„í‘œì˜ í•œìª½ì— ìˆëŠ” ê²½ìš°
+    //ë°˜ëŒ€í¸ ëŒ€ì§„í‘œë¥¼ ì§€ìš°ê³  ë‹¤ì‹œ í•¨ìˆ˜ì— ë„£ì–´ì¤€ë‹¤ (ì¬ê·€í•¨ìˆ˜)
     else{
         if(a <= n/2){
             return findsequence(n/2, a, b);
@@ -26,7 +26,7 @@ int findsequence(int n, int a, int b) {
 
 int solution(int n, int a, int b)
 {
-    //a¿Í bÁß ¹«Á¶°Ç b°¡ ´õ Å©µµ·Ï ¼³Á¤ÇÏ°Ú´Ù
+    //aì™€ bì¤‘ ë¬´ì¡°ê±´ bê°€ ë” í¬ë„ë¡ ì„¤ì •í•˜ê² ë‹¤
     if(a>b){
         int temp = a;
         a = b;
