@@ -5,12 +5,12 @@
 using namespace std;
 
 int solution(vector<vector<string>> clothes) {
-    vector<string> clothes_type;//¿Ê Á¾·ù°¡ ¸î Á¾·ùÀÎÁö ¾Ë±â À§ÇÑ º¤ÅÍ ¼³Á¤
-    for(int i=0; i<clothes.size(); i++){//¿Ê Á¾·ù º¤ÅÍ¿¡ ¿Ê Á¾·ùµé¸¸ ÀÔ·ÂÇÑ´Ù
+    vector<string> clothes_type;//ì˜· ì¢…ë¥˜ê°€ ëª‡ ì¢…ë¥˜ì¸ì§€ ì•Œê¸° ìœ„í•œ ë²¡í„° ì„¤ì •
+    for(int i=0; i<clothes.size(); i++){//ì˜· ì¢…ë¥˜ ë²¡í„°ì— ì˜· ì¢…ë¥˜ë“¤ë§Œ ìž…ë ¥í•œë‹¤
         clothes_type.push_back(clothes[i][1]);
     }
     sort(clothes_type.begin(), clothes_type.end());
-    //¿Ê Á¾·ù º¤ÅÍ¸¦ Á¤·ÄÇÏ¿© ¾Õ°ú µÚ¸¦ ºñ±³ÇÏ¸ç Á¾·ùº°·Î ¿ÊÀÌ ¸î°³ ÀÖ´ÂÁö ÆÄ¾ÇÇÑ´Ù
+    //ì˜· ì¢…ë¥˜ ë²¡í„°ë¥¼ ì •ë ¬í•˜ì—¬ ì•žê³¼ ë’¤ë¥¼ ë¹„êµí•˜ë©° ì¢…ë¥˜ë³„ë¡œ ì˜·ì´ ëª‡ê°œ ìžˆëŠ”ì§€ íŒŒì•…í•œë‹¤
     int count=1;
     vector<int> numOfType;
     for(int i=0; i<clothes_type.size()-1; i++){
@@ -23,13 +23,13 @@ int solution(vector<vector<string>> clothes) {
         }
     }
     numOfType.push_back(count);
-    //¸¸¾à ¿Ê Á¾·ù°¡ ÇÑ °¡Áö¶ó¸é °æ¿ìÀÇ ¼ö´Â ±× ¿Ê Á¾·ùÀÇ ¿Ê °¹¼ö°¡ µÈ´Ù
-    //ÇÑ °¡Áö°¡ ¾Æ´Ï¶ó¸é È®·üÀûÀ¸·Î »ý°¢ÇØº¸ÀÚ. ¿ÞÂÊ ¿¹·Î µéÀÚ¸é
-    //¾ó±¼ : ¾È°æ, ¼±±Û¶ó½º, x
-    //»óÀÇ : Æ¼¼ÅÃ÷, x
-    //ÇÏÀÇ : Ã»¹ÙÁö, x
-    //°Ñ¿Ê : ÄÚÆ®, x
-    //3C1*2C1*2C1*2C1-1(1À» »©ÁÖ´Â ÀÌÀ¯´Â ¾Æ¹«°Íµµ ¾È ÀÔÀ»¼ö´Â ¾ø±â ¶§¹®)
+    //ë§Œì•½ ì˜· ì¢…ë¥˜ê°€ í•œ ê°€ì§€ë¼ë©´ ê²½ìš°ì˜ ìˆ˜ëŠ” ê·¸ ì˜· ì¢…ë¥˜ì˜ ì˜· ê°¯ìˆ˜ê°€ ëœë‹¤
+    //í•œ ê°€ì§€ê°€ ì•„ë‹ˆë¼ë©´ í™•ë¥ ì ìœ¼ë¡œ ìƒê°í•´ë³´ìž. ì™¼ìª½ ì˜ˆë¡œ ë“¤ìžë©´
+    //ì–¼êµ´ : ì•ˆê²½, ì„ ê¸€ë¼ìŠ¤, x
+    //ìƒì˜ : í‹°ì…”ì¸ , x
+    //í•˜ì˜ : ì²­ë°”ì§€, x
+    //ê²‰ì˜· : ì½”íŠ¸, x
+    //3C1*2C1*2C1*2C1-1(1ì„ ë¹¼ì£¼ëŠ” ì´ìœ ëŠ” ì•„ë¬´ê²ƒë„ ì•ˆ ìž…ì„ìˆ˜ëŠ” ì—†ê¸° ë•Œë¬¸)
     int answer=1;
     if(numOfType.size()==1){
         answer = numOfType[0];
