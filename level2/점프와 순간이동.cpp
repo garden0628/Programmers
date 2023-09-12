@@ -3,7 +3,7 @@ using namespace std;
 
 int solution(int n)
 {
-    int count = 1; //а║гаго╢б х╫╪Ж
+    int count = 1; //ц│б║ц┤ц│ц┤ц▐б╢ц┌ ц┬б╫б╪ц╤
     while(n != 1){
         if(n%2==0){
             n /= 2;
